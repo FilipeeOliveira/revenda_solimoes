@@ -33,9 +33,7 @@ const HeroSection = () => {
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl md:text-8xl leading-tight" style={{ color: "#ff961b" }}>
             Revenda<br />Solimões
           </h1>
-          <span className="text-white text-lg md:text-2xl font-medium mt-2 tracking-widest">
-            ambev
-          </span>
+
         </motion.div>
 
         <motion.p
