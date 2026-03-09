@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import warehouseImg from "@/assets/warehouse.jpg";
+import heroImg from "@/assets/hero-bg.jpg";
+import essenciaImg from "@/assets/essencia-bg.jpg";
 
 const filiais = [
-  { city: "Manaus", desc: "Sede administrativa e operacional" },
-  { city: "Carauari", desc: "Atendimento regional" },
-  { city: "Coari", desc: "Distribuição local" },
-  { city: "Tefé", desc: "Ponto estratégico" },
-  { city: "Tabatinga", desc: "Fronteira e logística" },
-  { city: "Benjamin Constant", desc: "Presença na tríplice fronteira" },
+  { city: "Manaus", img: warehouseImg },
+  { city: "Carauari", img: heroImg },
+  { city: "Coari", img: essenciaImg },
+  { city: "Tefé", img: warehouseImg },
+  { city: "Tabatinga", img: heroImg },
+  { city: "Benjamin Constant", img: essenciaImg },
 ];
 
 const FiliaisSection = () => {
@@ -18,7 +20,7 @@ const FiliaisSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-6"
+          className="text-center mb-12"
         >
           <p className="text-accent font-heading font-semibold text-sm tracking-[0.2em] uppercase mb-3">
             Onde estamos
@@ -31,24 +33,27 @@ const FiliaisSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filiais.map((f, i) => (
             <motion.div
               key={f.city}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card rounded-2xl p-6 border border-border shadow-md hover:shadow-lg transition-shadow flex items-start gap-4"
+              transition={{ delay: i * 0.08 }}
+              className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
             >
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                <MapPin className="text-accent" size={22} />
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={f.img}
+                  alt={f.city}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div>
-                <h3 className="font-heading font-bold text-lg text-foreground">
+              <div className="bg-accent px-5 py-3">
+                <h3 className="font-heading font-bold text-base text-accent-foreground text-center">
                   {f.city}
                 </h3>
-                <p className="text-muted-foreground text-sm">{f.desc}</p>
               </div>
             </motion.div>
           ))}
