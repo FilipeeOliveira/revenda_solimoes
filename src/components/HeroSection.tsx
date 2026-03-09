@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.png";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
@@ -11,38 +12,49 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
       />
-      <div className="absolute inset-0 bg-hero-overlay/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/65" />
 
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
+      <div className="relative z-10 text-center px-4 max-w-2xl mx-auto flex flex-col items-center gap-4">
+        <motion.img
+          src={logo}
+          alt="Logo Revenda Solimões"
+          className="w-40 sm:w-56 md:w-80"
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-gold font-heading font-semibold text-sm md:text-base tracking-[0.25em] uppercase mb-4"
-        >
-          Revenda Autorizada Ambev
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="font-heading font-extrabold text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-tight mb-6"
-        >
-          Conectando pessoas,{" "}
-          <span className="text-gold">abastecendo municípios.</span>
-        </motion.h1>
+        />
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.4 }}
+          className="flex flex-col items-center"
         >
-          <a
-            href="#quem-somos"
-            className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-heading font-semibold px-8 py-4 rounded-lg hover:bg-accent/90 transition-colors text-sm md:text-base"
-          >
-            Conheça nossa história
-          </a>
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl md:text-8xl leading-tight" style={{ color: "#ff961b" }}>
+            Revenda<br />Solimões
+          </h1>
+          <span className="text-white text-lg md:text-2xl font-medium mt-2 tracking-widest">
+            ambev
+          </span>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="text-white/90 text-sm sm:text-base md:text-2xl"
+        >
+          Conectando pessoas, abastecendo municípios.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="text-white font-heading font-bold text-lg sm:text-xl md:text-4xl mt-2 md:mt-4"
+        >
+          Revenda Autorizada Ambev
+        </motion.p>
       </div>
 
       <motion.a
@@ -50,7 +62,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/60 animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce"
       >
         <ChevronDown size={32} />
       </motion.a>

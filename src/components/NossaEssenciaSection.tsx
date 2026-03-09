@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import warehouseImg from "@/assets/warehouse.jpg";
-import essenciaBg from "@/assets/essencia-bg.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+import missaoImg from "@/assets/missao.png";
+import visaoImg from "@/assets/visao.png";
+import valoresImg from "@/assets/valores.jpg";
 
 const cards = [
   {
     title: "Missão",
-    image: warehouseImg,
+    image: missaoImg,
     content: (
       <p>
         Representar a Ambev com excelência, garantindo a comercialização e o abastecimento de seus produtos em toda a calha do Rio Solimões.
@@ -15,7 +15,7 @@ const cards = [
   },
   {
     title: "Visão",
-    image: essenciaBg,
+    image: visaoImg,
     content: (
       <p>
         Ser reconhecida como uma revenda de referência na região, fortalecendo parcerias comerciais e ampliando nossa presença nos municípios onde atuamos.
@@ -24,7 +24,7 @@ const cards = [
   },
   {
     title: "Valores",
-    image: heroBg,
+    image: valoresImg,
     content: (
       <ul className="list-disc list-inside space-y-1 text-left">
         <li>Atuar com responsabilidade</li>
@@ -44,7 +44,7 @@ const NossaEssenciaSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-heading font-extrabold text-3xl md:text-5xl text-primary text-center mb-16 italic"
+          className="font-heading font-extrabold text-2xl md:text-5xl text-primary text-center mb-8 md:mb-16 italic"
         >
           Nossa Essência
         </motion.h2>
@@ -57,7 +57,8 @@ const NossaEssenciaSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="bg-gold rounded-2xl overflow-hidden border-2 border-gold shadow-lg"
+              className="rounded-2xl overflow-hidden shadow-lg"
+              style={{ backgroundColor: "#ff961b" }}
             >
               <div className="p-3 pb-0">
                 <div className="rounded-xl overflow-hidden">

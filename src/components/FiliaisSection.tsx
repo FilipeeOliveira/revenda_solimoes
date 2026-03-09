@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
-import warehouseImg from "@/assets/warehouse.jpg";
-import heroImg from "@/assets/hero-bg.jpg";
-import essenciaImg from "@/assets/essencia-bg.jpg";
+import benjaminImg from "@/assets/FOTOS_FILIAIS/FILIAL_BENJAMIN CONSTANT.jpg";
+import carauariImg from "@/assets/FOTOS_FILIAIS/FILIAL_CARAUARI.jpg";
+import coariImg from "@/assets/FOTOS_FILIAIS/FILIAL_COARI.jpg";
+import manausImg from "@/assets/FOTOS_FILIAIS/FILIAL_MANAUS.jpg";
+import tabatingaImg from "@/assets/FOTOS_FILIAIS/FILIAL_TABATINGA.jpg";
+import tefeImg from "@/assets/FOTOS_FILIAIS/FILIAL_TEFÉ.jpg";
 
 const filiais = [
-  { city: "Manaus", img: warehouseImg },
-  { city: "Carauari", img: heroImg },
-  { city: "Coari", img: essenciaImg },
-  { city: "Tefé", img: warehouseImg },
-  { city: "Tabatinga", img: heroImg },
-  { city: "Benjamin Constant", img: essenciaImg },
+  { city: "Benjamin Constant", img: benjaminImg },
+  { city: "Carauari", img: carauariImg },
+  { city: "Coari", img: coariImg },
+  { city: "Manaus", img: manausImg },
+  { city: "Tabatinga", img: tabatingaImg },
+  { city: "Tefé", img: tefeImg },
 ];
 
 const FiliaisSection = () => {
@@ -22,13 +25,10 @@ const FiliaisSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-accent font-heading font-semibold text-sm tracking-[0.2em] uppercase mb-3">
-            Onde estamos
-          </p>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">
+          <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-primary mb-4 md:mb-6">
             Nossas Filiais
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-foreground font-semibold text-base md:text-lg max-w-2xl mx-auto">
             Estamos presentes em municípios estratégicos da calha do Rio Solimões, aproximando ainda mais nossa atuação dos clientes e comerciantes da região.
           </p>
         </motion.div>
@@ -50,8 +50,8 @@ const FiliaisSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="bg-accent px-5 py-3">
-                <h3 className="font-heading font-bold text-base text-accent-foreground text-center">
+              <div className="px-5 py-3 rounded-b-2xl" style={{ backgroundColor: "#ff961b" }}>
+                <h3 className="font-heading font-bold text-base text-white text-center">
                   {f.city}
                 </h3>
               </div>
