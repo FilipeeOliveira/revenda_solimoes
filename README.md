@@ -1,6 +1,6 @@
 # Revenda Solimões - Site Institucional
 
-Site institucional da Revenda Solimões, distribuidora autorizada Ambev na calha do Rio Solimões.
+Site institucional da Revenda Solimões, distribuidora Ambev na calha do Rio Solimões.
 
 ## Tecnologias
 

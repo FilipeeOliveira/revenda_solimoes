@@ -53,7 +53,7 @@ const HeroSection = () => {
           transition={{ delay: 0.8 }}
           className="text-white font-heading font-bold text-lg sm:text-xl md:text-4xl mt-2 md:mt-4"
         >
-          Revenda Autorizada Ambev
+          Revenda Ambev
         </motion.p>
       </div>
 
